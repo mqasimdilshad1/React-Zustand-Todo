@@ -20,7 +20,7 @@ const Form = () => {
         <div className="flex mb-4">
           <input
             type="text"
-            className="border border-blue-950 rounded-sm p-2 w-[75%] mr-2 bg-slate-100 "
+            className="border rounded-sm p-2 w-[75%] mr-2 bg-slate-100 "
             placeholder="Add new todo"
             value={newTodo}
             onChange={(e) => setNewTodo(e.target.value)}
