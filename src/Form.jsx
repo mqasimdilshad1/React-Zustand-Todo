@@ -42,7 +42,7 @@ const Form = () => {
             <li
               key={index}
               className={`flex items-center mb-2 justify-between bg-slate-300 p-2 rounded-md gap-1 ${
-                todo.isFavorite ? "border-2 border-red-500 bg-pink-200" : ""
+                todo.isFavorite ? "border-2 border-red-500 bg-pink-300" : ""
               }`}
             >
               <span className="mr-2 basis-[80%] font-mono">{todo.text}</span>
