@@ -14,6 +14,13 @@ const Form = () => {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleAddTodo(e);
+    }
+  };
+
   return (
     <div className="bg-[#1C233E] h-screen flex items-center justify-center box-border">
       <div className="bg-white p-8 rounded shadow-md w-96">
@@ -28,6 +35,7 @@ const Form = () => {
             placeholder="Add new todo"
             value={newTodo}
             onChange={(e) => setNewTodo(e.target.value)}
+            onKeyDown={handleKeyPress}
           />
           <button
             className="bg-blue-500 text-white px-6 py-2 rounded text-nowrap font-mono"
@@ -37,7 +45,7 @@ const Form = () => {
           </button>
         </div>
 
-        <ul>
+        <ul className="overflow-y-auto max-h-48">
           {todos.map((todo, index) => (
             <li
               key={index}
